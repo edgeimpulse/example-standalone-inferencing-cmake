@@ -18,3 +18,5 @@ set_source_files_properties(main.c PROPERTIES LANGUAGE CXX)
 
 # Location of impulse library
 add_subdirectory(lib)
+# Remove me on ARM Cortex A processors
+target_compile_definitions(app PUBLIC TF_LITE_DISABLE_X86_NEON=1)
