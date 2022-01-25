@@ -1,54 +1,9 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Edge Impulse ignores
 build/
 *.gcda
+utensor-model/
+lib/tflite-model/
+lib/model-parameters/
+lib/edge-impulse-sdk/
+lib/CMakeLists.txt
 deploy.zip
 *.o
-convert/node_modules/
-tflite-model/
-model-parameters/
-edge-impulse-sdk
-features.txt
-images/
-convert/
-output.*.txt
-out/
-features*.txt
-opencv/
-*.onnx
-convert-savedmodel/saved_model/
-
-# Toolchains
-.vscode

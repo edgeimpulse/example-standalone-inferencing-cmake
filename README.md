@@ -1,13 +1,34 @@
-# Example Standalone Inference
+# Edge Impulse Example: Standalone Example Using CMake
 
-Runs a simple local inference example on Linux, macOS, or Windows. Follow [this guide](https://docs.edgeimpulse.com/v2.0/docs/deploy-your-model-as-a-c-library) to get started.
+This builds and runs an exported impulse locally on your machine. See the documentation at [Running your impulse locally](https://docs.edgeimpulse.com/docs/running-your-impulse-locally). This project demonstrates how to use CMake to generate a GNU Make build system for a local C++ SDK project.
 
-Basic steps:
- * Download and unzip your Edge Impulse C++ library into the *lib/* directory
- * Copy a test sample's *raw features* into the `input_buf[]` array in *main.c*
- * Enter `make` in this directory to compile the project
- * Enter `./build/my-motion` to run the application
- * Compare the output predictions to the predictions of the test sample in the Edge Impulse Studio
+## Basic Steps
+
+Download and unzip your Edge Impulse C++ library into the *lib/* directory. Run the following commands from this directory:
+
+```
+mkdir build
+cd build
+cmake ..
+```
+ 
+**Note:** for Windows with MinGW, you will want to call `cmake .. -G "MinGW Makefiles"` instead.
+
+Build the project (the `-j` flag can be used to speed up build time by using multiple threads):
+
+```
+make -j
+```
+
+Next, go into your *Edge Impulse project > Model testing* and click to *Show classification* for one of your test samples. Copy the *Raw features* and paste them into a new text file in the build directory: *build/features.txt*
+
+Run the application and give it the location of the *features.txt* file as an argument:
+
+```
+./app features.txt
+```
+
+**Note:** for Windows, this command will likely be `app.exe features.txt`
 
  ## License
 
