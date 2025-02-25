@@ -32,4 +32,4 @@ Run the application and give it the location of the *features.txt* file as an ar
 
  ## License
 
- [Appache License v2.0](https://www.apache.org/licenses/LICENSE-2.0)
+ [BSD 3-Clause Clear License](./LICENSE)
